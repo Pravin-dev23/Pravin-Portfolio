@@ -4,7 +4,7 @@ const BioSection = () => {
       <h2 className="text-comment mb-4">//bio</h2>
       <div className="text-foreground/90 leading-relaxed space-y-4 max-w-3xl">
         <p>
-          Creative Designer & Indie Game Developer exploring Unity 2D, Unreal Engine, and Python Gamedevloper (PyGame). Since 2023 I've specialized in graphic design  gaming thumbnails, banners, pixel art, merch branding, UI/UX layouts, and visual identity.
+          Creative Designer & Indie Game Developer exploring Unity 2D, Unreal Engine, and PyGame. Since 2023 I've specialized in graphic design  gaming thumbnails, banners, pixel art, merch branding, UI/UX layouts, and visual identity.
         </p>
         <p>
           On the game side I've built projects ranging from simple 2D boredom-relief games to 3D horror experiments, and I'm focused on taking my game dev work to a larger, more ambitious level.
