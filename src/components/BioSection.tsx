@@ -4,13 +4,16 @@ const BioSection = () => {
       <h2 className="text-comment mb-4">//bio</h2>
       <div className="text-foreground/90 leading-relaxed space-y-4 max-w-3xl">
         <p>
-          Creative Designer & Indie Game Developer exploring the worlds of Unity 2D, Python game dev, and web design. Since 2023, I've specialized in graphic design, creating gaming thumbnails, merch designs, UI/UX layouts, and branding.
+          Creative Designer & Indie Game Developer exploring Unity 2D, Python game dev, and web design. Since 2023 I've specialized in graphic design  gaming thumbnails, banners, pixel art, merch branding, UI/UX layouts, and visual identity.
         </p>
         <p>
-          I've built projects ranging from Pac-Man remakes, Among Us-style games, and platformers, to anime-themed websites, frontend prototypes, and DBMS systems.
+          On the game side I've built projects ranging from simple 2D boredom-relief games to 3D horror experiments, and I'm focused on taking my game dev work to a larger, more ambitious level.
         </p>
         <p>
-          I love mixing tech + creativity — whether it's pixel art, Minecraft skins, mask edits, Pygame dinos, or motion-ready Instagram reels. Currently exploring game movement systems, character animations, web-based game hosting, and shop/merch designs.
+          In design I create thumbnails, banners, pixel art, merch concepts, and brand assets blending visuals that perform on platforms and merch alike.
+        </p>
+        <p>
+          Check out my projects :)
         </p>
       </div>
     </section>

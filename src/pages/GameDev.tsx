@@ -6,40 +6,31 @@ import ProjectCard from "@/components/ProjectCard";
 const GameDev = () => {
   const games = [
     {
-      title: "Pac-Man Remake",
-      description: "Classic arcade game recreated with modern Unity 2D features and smooth animations.",
-      tags: ["Unity 2D", "C#", "Arcade"],
-      link: "#"
+      title: "Cursed Nurse",
+      description:
+        "Classic Horror game , where you have to escape from the haunted hospital and nurse.",
+      tags: ["Unreal Engine 5", "Horror"],
+      link: "https://share.google/PezSTG5x79lQx3txo",
     },
     {
-      title: "Space Survivor",
-      description: "Top-down survival shooter with procedural enemy spawning and power-up system.",
-      tags: ["Pygame", "Python", "Shooter"],
-      link: "#"
+      title: "Me VS Zombies",
+      description:
+        "Bored? Survive waves of zombies with many twists and advantages and disadvantages",
+      tags: ["Unity 2D", "Survival"],
+      link: "https://www.linkedin.com/posts/pravin-kumar-v-0ab99a2b0_happy-to-announce-that-ive-completed-my-activity-7233763415335317504-yMV0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAErliQMBL_30usr1-95TiEzHtCqD3qVFaMU",
     },
     {
-      title: "Among Us Clone",
-      description: "Social deduction game prototype with local multiplayer support.",
-      tags: ["Unity 2D", "Multiplayer", "Prototype"],
-      link: "#"
+      title: "Pac-Man Recreation",
+      description: "Recreation of the classic Pac-Man game",
+      tags: ["Unity 2D", "Arcade"],
+      link: "https://www.linkedin.com/posts/pravin-kumar-v-0ab99a2b0_excited-to-share-my-next-project-on-game-activity-7235905542152495104-Dy-O?utm_source=share&utm_medium=member_desktop&rcm=ACoAAErliQMBL_30usr1-95TiEzHtCqD3qVFaMU",
     },
     {
-      title: "Pixel Platformer",
-      description: "2D platformer with precise movement mechanics and pixel art aesthetics.",
-      tags: ["Unity 2D", "Platformer", "Pixel Art"],
-      link: "#"
-    },
-    {
-      title: "Dino Runner",
-      description: "Endless runner inspired by Chrome's offline game, built with Pygame.",
-      tags: ["Pygame", "Python", "Endless Runner"],
-      link: "#"
-    },
-    {
-      title: "Tower Defense",
-      description: "Strategic tower defense with multiple tower types and enemy waves.",
-      tags: ["Unity 2D", "Strategy", "WIP"],
-      link: "#"
+      title: "Dino Game Reimagined",
+      description:
+        "A modern take on the classic Chrome Dino game with new features and power-ups made to overcome your boredom",
+      tags: ["Unity 2D", "Endless Runner"],
+      link: "#",
     },
   ];
 
@@ -49,16 +40,14 @@ const GameDev = () => {
         <TerminalWindow>
           <TopBar variant="gamedev" />
           <Navigation activeTab="Game Dev" />
-          
+
           <section className="animate-fade-in">
-            <h1 className="text-2xl md:text-3xl font-semibold mb-2 text-glow">
-              {"<Game Development>"}
-            </h1>
+            <h1 className="text-2xl md:text-3xl font-semibold mb-2 text-glow">{"<Game Development>"}</h1>
             <p className="text-comment mb-8">// Unity 2D & Python Games</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {games.map((game, index) => (
-                <div 
+                <div
                   key={game.title}
                   className="animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "both" }}

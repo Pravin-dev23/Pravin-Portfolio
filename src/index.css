@@ -4,45 +4,47 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 95%;
+    /* Light theme (default) */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 8%;
 
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 6%;
 
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
 
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 4%;
+    --primary: 0 0% 6%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 12%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 55%;
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 0 0% 18%;
-    --accent-foreground: 0 0% 95%;
+    --accent: 220 6% 95%;
+    --accent-foreground: 0 0% 12%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 0 0% 40%;
+    --border: 0 0% 92%;
+    --input: 0 0% 98%;
+    --ring: 220 10% 90%;
 
     --radius: 0.5rem;
 
     /* Custom terminal colors */
-    --terminal-red: 0 70% 55%;
+    --terminal-red: 0 70% 45%;
     --terminal-yellow: 45 90% 55%;
-    --terminal-green: 120 50% 50%;
-    --glow: 0 0% 100%;
-    --comment: 0 0% 45%;
+    --terminal-green: 120 50% 35%;
+    --glow: 0 0% 12%;
+    --comment: 0 0% 55%;
   }
 
   .dark {
+    /* Dark theme */
     --background: 0 0% 4%;
     --foreground: 0 0% 95%;
     --card: 0 0% 7%;
@@ -90,6 +92,40 @@
 
   .text-glow {
     text-shadow: 0 0 20px hsl(var(--glow) / 0.3);
+  }
+
+  /* Dark-mode specific white glow helpers */
+  .white-glow-img {
+    box-shadow: none;
+    position: relative;
+  }
+
+  .white-text-glow {
+    text-shadow: none;
+  }
+
+  .dark .white-glow-img {
+    box-shadow: 0 0 48px 12px rgba(255,255,255,0.12);
+  }
+
+  /* Radial soft light behind profile image in dark mode */
+  .dark .white-glow-img::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 160%;
+    height: 160%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 30%, rgba(255,255,255,0) 60%);
+    filter: blur(12px);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .dark .white-text-glow {
+    text-shadow: 0 0 36px rgba(255,255,255,0.45);
   }
 
   .glass {
@@ -160,6 +196,10 @@
   animation: pulse-glow 3s ease-in-out infinite;
 }
 
+html, body {
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
@@ -177,4 +217,12 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--muted-foreground));
+}
+
+/* Pixel cursor: switched to native browser cursor via JS (see src/components/PixelCursor.tsx) */
+/* Keep a small helper class in case it's needed later */
+.pixel-cursor {
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+  background-size: contain;
 }

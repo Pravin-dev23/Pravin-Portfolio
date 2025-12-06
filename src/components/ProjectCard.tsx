@@ -5,7 +5,6 @@ interface ProjectCardProps {
   description: string;
   tags: string[];
   link?: string;
-  image?: string;
 }
 
 const ProjectCard = ({ title, description, tags, link }: ProjectCardProps) => {

@@ -3,7 +3,7 @@ import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import ProfileSection from "@/components/ProfileSection";
 import BioSection from "@/components/BioSection";
-import GitHubActivity from "@/components/GitHubActivity";
+import MusicTaste from "@/components/MusicTaste";
 
 const Index = () => {
   return (
@@ -14,7 +14,7 @@ const Index = () => {
           <Navigation activeTab="Home" />
           <ProfileSection />
           <BioSection />
-          <GitHubActivity />
+          <MusicTaste />
         </TerminalWindow>
       </div>
     </main>

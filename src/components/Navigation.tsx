@@ -11,7 +11,6 @@ const Navigation = ({ activeTab }: NavigationProps) => {
     { name: "Design", path: "/design" },
     { name: "Tech Stack", path: "/techstack" },
     { name: "Contact", path: "/contact" },
-    { name: "Sign In", path: "/login" },
   ];
 
   return (
